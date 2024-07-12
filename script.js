@@ -1,3 +1,8 @@
+function validateInput() {
+    const inputField = document.getElementById('inputText');
+    inputField.value = inputField.value.replace(/[^0-9,]/g, ''); // Allow only numbers and commas
+}
+
 function generateQRCodes() {
     generateCodes('qr');
 }
