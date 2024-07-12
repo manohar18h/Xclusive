@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMEI QR Code and Barcode Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>IMEI QR Code and Barcode Generator</h1>
+        <input id="inputText" type="text" pattern="\d*" placeholder="Enter IMEI numbers, separated by commas">
+        <div class="buttons">
+            <button onclick="generateQRCodes()">Generate QR Codes</button>
+            <button onclick="generateBarcodes()">Generate Barcodes</button>
+            <button onclick="printCodes()">Print Codes</button>
+            <button onclick="clearCodes()">Clear</button>
+        </div>
+        <div id="codesContainer" class="codes-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
