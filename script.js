@@ -1,8 +1,3 @@
-function validateInput() {
-    const inputField = document.getElementById('inputText');
-    inputField.value = inputField.value.replace(/[^0-9,]/g, ''); // Allow only numbers and commas
-}
-
 function generateQRCodes() {
     generateCodes('qr');
 }
@@ -19,7 +14,7 @@ function generateCodes(type) {
 
     texts.forEach(text => {
         const trimmedText = text.trim();
-        if (trimmedText && /^[0-9]+$/.test(trimmedText)) {
+        if (trimmedText) {
             if (type === 'qr') {
                 // Generate QR Code
                 const qrCodeDiv = document.createElement('div');
@@ -43,10 +38,7 @@ function generateCodes(type) {
                 barcodeCanvas.classList.add('barcode');
                 codesContainer.appendChild(barcodeCanvas);
             }
-        } else {
-            alert("Please enter valid numbers separated by commas.");
-            return;
-        }
+        } 
     });
 }
 
